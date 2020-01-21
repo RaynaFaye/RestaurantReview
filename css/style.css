@@ -1,0 +1,219 @@
+body {
+    margin : 0;
+}
+header, #restaurant_review, #map_and_list {
+    background: 
+    linear-gradient(
+      rgba(0,0,0,0.8), 
+      rgba(0,0,0,0.8)
+    ),
+    url('../images/backdrop.jpeg');
+    background-size: cover;
+}
+header, #restaurant_Name, .infoWindowName, h4 {
+    font-family: 'Rammetto One', cursive;
+    color: #b87333;
+}
+#restaurant_list a, #restaurant_list, #restaurant_review, #submitNewRestaurant, #intro_info {
+    color: #ffffff;
+}
+#intro, #restaurant_list h3, .star, star2 {
+    font-size: 1.5em;
+}
+#restaurant_Name, .infoWindowName {
+    font-size: 2em;
+}
+.star {
+    color: #ffd900;
+}
+.star2 {
+    color: #d68400;
+}
+.italic {
+    font-style: italic;
+    margin-top: 50px;
+}
+/*Header Section*/
+header {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+#logo {
+    width:100px;
+    height: 75px;
+}
+#logo_title {
+    display: flex;
+}
+/*Main content*/
+#intro_info, #restaurant_list {
+    width: 500px;
+    margin-left: 15px;
+}
+#intro_info {
+    margin-top: 50px;
+    font-size: 1.3em;
+}
+#map_and_list {
+    display: flex;
+}
+#map, #restaurant_list {
+    height: calc(100vh - 101px);
+}
+#map {
+    width: 100%;
+}
+#restaurant_list {
+    display: none;
+    overflow: scroll;
+    text-align: center
+}
+#restaurant_list h3 {
+    color: #b87333;
+    font-family: 'Open Sans', sans-serif;
+}
+#restaurant_list hr {
+    margin-top: 30px;
+}
+.window_info a, hr {
+    color: #000000;
+}
+.window_info {
+    text-align: center;
+    font-size: 1.1em;
+}
+.list_info {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+#autocompleteCity, #autocompleteRestaurant {
+    display: none;
+    width: 250px;
+    margin-right: 10px;
+}
+#startRange, #endRange {
+    width: 50px;
+}
+/*Review Section*/
+#restaurant_review {
+    display: none;
+    padding: 50px;
+    font-size: 1.1em;
+}
+#restaurant_info_section {
+    display: flex;
+    justify-content: space-between;
+}
+#information {
+    width: 50%;
+}
+#photo_view {
+    margin-left: 50px;
+    width: 1000px;
+    height: 600px;
+}
+#website {
+    color: #b87333;
+}
+#website, #telephone, #address {
+    font-size: 1.3em;
+}
+#scroll {
+    width: 200px;
+    padding: 5px;
+    border-radius: 10px;
+}
+/*Add a review Form*/
+#review_form {
+    margin-top: 50px;
+}
+input, textarea, select {
+    width: 500px;
+    margin: 10px 0 10px 0;
+}
+input {
+    height: 30px;
+}
+textarea {
+    height: 150px;
+}
+select {
+    width: 75px;
+}
+#submitbtn {
+    width: 100px;
+    border-radius: 10px;
+}
+/*Info window form*/
+#newRestaurant input{
+    width: 250px;
+}
+#submitNewRestaurant {
+    background-color: #00146e;
+    border-radius: 10px;
+}
+/*Responsive*/
+@media all and (max-width: 1560px) {
+    #photo_view {
+        width: 700px;
+        height: 500px;
+    }
+}
+@media all and (max-width: 1380px) {
+    #photo_view {
+        width: 600px;
+        height: 400px;
+    }
+}
+@media all and (max-width: 992px) {
+    #restaurant_info_section {
+        flex-direction: column;
+    }
+    #photo_view {
+        margin-top: 50px;
+        margin-left: 0;
+    }
+}
+@media all and (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    #intro {
+        padding-left: 30px;
+    }
+    #map_and_list {
+        flex-direction: column;
+    }
+    #map, #restaurant_list {
+        height: calc(100vh - 207px);
+    }
+    #restaurant_list {
+        width: 100%;
+    }
+}
+@media all and (max-width: 668px) {
+    #photo_view {
+        width: 400px;
+        height: 275px;
+    }
+    input, textarea {
+        width: 300px;
+    }
+}
+@media all and (max-width: 468px) {
+    #photo_view {
+        width: 325px;
+        height: 225px;
+    }
+}
+@media all and (max-width: 378px) {
+    #photo_view {
+        width: 250px;
+        height: 200px;
+    }
+    input, textarea {
+        width: 200px;
+    }
+}

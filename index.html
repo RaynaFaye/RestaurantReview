@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Restaurant Review</title>
+    <meta name="description" content="chercher et trouvez le restaurant dans votre région ou ajoutez le" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <div id="logo_title">
+        <img src="images/logo4.png" alt="website logo" id="logo" />
+        <h1>Quiche Me</h1>
+      </div>
+      <div id="intro">
+        <p>Restaurant Reviews</p>
+      </div>
+    </header>
+
+    <main id="content">
+      <section id="map_and_list">
+        <input id="autocompleteCity" class="controls" type="text" placeholder="Rechercher par ville" />
+        <input id="autocompleteRestaurant" class="controls" type="text" placeholder="Rechercher restaurant dans la zone" />
+        <div id="map"></div>
+        <div id="intro_info">
+          <p>Nous cherchons votre localisation.</p>
+          <p>Vous pourrez trouver des restaurants dans votre zone, ou ailleurs sur la carte.</p>
+          <p>Pour ajouter un nouveau restaurant, cliquez sur le bouton droit de la souris</p>
+        </div>
+        <div id="restaurant_list">
+          <form id="restaurant_range">
+            <span>Restaurants entre </span>
+            <select id="startRange">
+              <option value="1" selected>1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <span> et </span>
+            <select id="endRange">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5" selected>5</option>
+            </select>
+            <span> étoiles</span>
+          </form>
+        </div>
+      </section>
+
+      <section id="restaurant_review">
+        <button id="scroll">Retour Carte</button>
+        <div id="restaurant_info_section">
+          <div id="information">
+            <h2 id="restaurant_Name"></h2>
+            <p id="adresse"></p>
+            <p id="telephone"></p>
+            <a href="" id="website"></a>
+            <p id="open"></p>
+            <h3 class="italic">Commentaires</h3>
+            <div id="comments"></div>
+          </div>
+          <div id="photo_view"></div>
+        </div>
+        <form id="review_form">
+          <h3 class="italic">Souhaitez-vous ajouter un avis sur ce restaurant?</h3>
+          <label>Votre Nom :</label><br />
+          <input type="text" name="nom" /><br />
+          <label>Combien d'étoiles donnez vous :</label><br />
+          <select name="numberstars">
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option> </select
+          ><br />
+          <label>Votre Commentaire :</label><br />
+          <textarea name="fullcomment"></textarea><br />
+          <input type="submit" id="submitbtn" />
+        </form>
+      </section>
+    </main>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=APIKEY&libraries=places&callback=initMap"></script>
+  </body>
+</html>
